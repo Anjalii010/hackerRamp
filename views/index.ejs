@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/">Community</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="community-section">
+            <h1>Community Contests</h1>
+
+            <div class="contest">
+                <div class="contest-details">
+                    <h2>Vintage Revival</h2>
+                    <p>Take a trip back in time with vintage fashion revival. Whether it's retro 50s glam or groovy 70s vibes, reinterpret classic styles in a modern context. Show how vintage fashion continues to inspire and influence contemporary trends..</p>
+                </div>
+                <div class="contest-actions">
+                    <button class="join-btn" id="join-btn">Join</button>
+                    <div class="timer" id="contest-timer">
+                        <p>Time left: <span id="time-left">00:00:00</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="time-over-message">
+                <p><strong>Time for contest participation is over.</strong></p>
+                <div id="voting-timer" class="time-box">
+                    Voting will start in: <span id="voting-timer-value">00:00</span>
+                </div>
+            </div>
+
+            <div id="contestants-section">
+                <h2>Contestants</h2>
+                <div id="contestants-container" class="photo-gallery">
+                    <% contestants.forEach(contestant => { %>
+                    <div class="photo-item">
+                        <img src="/uploads/<%= contestant.photo %>" alt="Contestant Photo">
+                        <p><%= contestant.description %></p>
+                        <div class="actions">
+            <button class="vote-btn">Vote</button>
+            <button class="comment-btn">Comment</button>
+        </div>
+        <div class="stats-box">
+            <div class="votes">Votes: <span class="votes-count"><%= contestant.votes.length %></span></div>
+            <div class="comments">Comments: <span class="comments-count"><%= contestant.comments.length %></span></div>
+        </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+             <!-- Display top three contestants here -->
+            <div id="top-three-container">
+                
+                <div id="top-three-list" class="photo-gallery">
+                    <!-- Top three contestants will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+
+        <div id="join-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-btn">&times;</span>
+                <h2>Join Contest</h2>
+                <form id="join-form" enctype="multipart/form-data">
+                    <label for="file-input">Upload your design:</label>
+                    <input type="file" id="file-input" name="file" required>
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

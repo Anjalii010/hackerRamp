@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6dfea;
+}
+
+header {
+    background-color: #2c0d1c;
+    color: #f4eef3;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #f4eef3;
+    text-decoration: none;
+}
+
+.mssg-container {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+main {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+#register-section {
+    background-color: #f7a2c4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(242, 99, 161, 0.1);
+    width: 50%; /* Adjust as per your design */
+    max-width: 400px; /* Max width for responsiveness */
+    float:left;
+    margin-right:20px;
+}
+
+#register-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#register-form label {
+    margin-bottom: 10px;
+}
+
+#register-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #2b0524;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* Specific styles for login page */
+
+#login-section {
+    background-color: #f7a2c4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(242, 99, 161, 0.1);
+    width: 50%; /* Adjust as per your design */
+    max-width: 400px; /* Max width for responsiveness */
+    float:left;
+}
+
+#login-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form label {
+    margin-bottom: 10px;
+}
+
+#login-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #2b0524;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #37072d;
+    color: #fefcfd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #612053;
+} 
